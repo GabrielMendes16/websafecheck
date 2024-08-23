@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Verificação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #0000; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh;color: #333;">
+
+    <div style="text-align: center; width: 90%; max-width: 800px; margin: auto;border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; overflow: hidden;">
+        <header style=" font-size: 1.5rem; margin-bottom: 2rem;color: #1d1e22">
+            <h1>Resultado da Verificação para {{ url }}</h1>
+        </header>
+        <div style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;  margin-bottom: 2rem;">
+            {% if google_result and virustotal_result %}
+            <h2>Verificação de URL Maliciosa:</h2>
+            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: rgb(50, 226, 117);">Utilizando a API do Google Safe Browsing para testar se a URL é segura: <strong style="color: rgb(0, 0, 0);">{{
+                    google_result }}</strong></p>
+            <p style="font-size: 1.5rem; margin-bottom: 1rem; color: rgb(78, 51, 150);">Utilizando a API do VirusTotal para testar se a URL é segura: <strong style="color: rgb(0, 0, 0);">{{
+                    virustotal_result }}</strong></p>
+            {% endif %}
+        </div>
+
+        <button style="padding: 0.7rem 1.5rem; font-size: 1rem; border: none; border-radius: 4px; background-color: #4285f4; color: white; cursor: pointer; transition: background-color 0.3s;">
+            <a style="text-decoration: none; color: white;" href="{{ url_for('index') }}">Realizar Outra Consulta</a>
+        </button>
+    </div>
+
+
+
+
+</body>
+
+</html>

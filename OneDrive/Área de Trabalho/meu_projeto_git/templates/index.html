@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Segurança de Sites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body
+    style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; color: #333;">
+
+    <div style="text-align: center; width: 90%; max-width: 800px; margin: auto; overflow: hidden;">
+        <header style=" font-size: 0.5rem; margin-bottom: 2rem; color: #1d1e22;">
+            <h1>Verificador de Segurança de Sites</h1>
+        </header>
+        <div style="display: flex; flex-direction: column;gap: 2rem;">
+            <div
+                style="background-color: #ffffff;border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #1d1e22;">Verificador de Segurança de Sites</h2>
+                <form style="display: flex; flex-direction: column; gap: 1rem; align-items: center;" method="POST">
+                    <label style="font-size: 1rem; color: #555;" for="url">Insira a URL do site:</label>
+                    <input style="width: 100%; max-width: 400px; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" type="text" id="url" name="url" required>
+                    <button style="padding: 0.7rem 1.5rem; font-size: 1rem; border: none; border-radius: 4px; background-color: #4285f4; color: white; cursor: pointer; transition: background-color 0.3s;" type="submit">Verificar Segurança</button>
+                </form>
+            </div>
+
+            <div style="background-color: #ffffff;border: 1px solid #e0e0e0; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;"">
+                <h2>Verificar se a URL é Maliciosa</h2>
+                <form style="display: flex; flex-direction: column; gap: 1rem; align-items: center;" method="POST" action="/check_url">
+                <label style="font-size: 1rem; color: #555;" for="malicious_url">Insira a URL para verificação:</label>
+                <input style="width: 100%; max-width: 400px; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" type="text" id="malicious_url" name="malicious_url" required>
+                <button style="padding: 0.7rem 1.5rem; font-size: 1rem; border: none; border-radius: 4px; background-color: #4285f4; color: white; cursor: pointer; transition: background-color 0.3s;" type="submit">Verificar URL</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
